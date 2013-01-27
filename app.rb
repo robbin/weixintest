@@ -1,7 +1,5 @@
 require 'digest/sha1'
-require 'nokogiri'
 TOKEN = "your_token_here"
-
 enable :inline_templates
 
 before do
