@@ -12,7 +12,7 @@ end
 
 post '/' do
   content_type :xml
-  root = Nokogiri::XML(request.body.string).root
+  root = Nokogiri::XML(request.body.gets).root
   @receiver = root.xpath("ToUserName").children.text
   @sender = root.xpath("FromUserName").children.text
   @send_time = Time.at(root.xpath("CreateTime").text.to_i)
