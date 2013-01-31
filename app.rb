@@ -3,7 +3,7 @@ TOKEN = "your_token_here"
 enable :inline_templates
 
 before do
-  halt 406 unless valid?(params)
+  halt 401 unless valid?(params)
 end
 
 get '/' do
